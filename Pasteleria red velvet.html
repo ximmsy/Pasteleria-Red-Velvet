@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pastelería Red Velvet</title>
+
+<!-- FUENTES -->
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&family=Berkshire+Swash&display=swap" rel="stylesheet">
+
+<style>
+/* ==================== PALETA ==================== */
+:root {
+    --brown: #5a3b28;
+    --brown-light: #a67c63;
+    --cream: #fff6e9;
+    --caramel: #e7c8a0;
+    --mint: #d9f2e6;
+    --pink: #f7d4df;
+    --pink-dark: #d38ca3;
+    --border: #c19a82;
+}
+
+/* ==================== BODY ==================== */
+body {
+    margin: 0;
+    background: var(--cream);
+    font-family: 'Fredoka', sans-serif;
+    color: var(--brown);
+}
+
+/* ==================== NAVBAR ==================== */
+.navbar {
+    background: var(--brown);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    background: var(--brown-light);
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+.navbar a:hover {
+    background: var(--caramel);
+    color: var(--brown);
+}
+
+/* ==================== CONTENEDOR ==================== */
+.container {
+    width: 900px;
+    background: white;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 15px;
+    border: 6px solid var(--border);
+    box-shadow: 0 0 10px #00000020;
+}
+
+/* ==================== TÍTULOS ==================== */
+.title {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 40px;
+    text-align: center;
+}
+.subtitle {
+    text-align: center;
+    color: var(--brown-light);
+    margin-top: -10px;
+}
+
+/* ==================== GRID ==================== */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* ==================== TARJETAS ==================== */
+.box {
+    background: var(--pink);
+    border: 3px solid var(--pink-dark);
+    padding: 15px;
+    border-radius: 12px;
+}
+.box h3 {
+    font-family: 'Berkshire Swash';
+    margin-top: 0;
+}
+
+/* ==================== IMÁGENES (FIX) ==================== */
+.img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 3px dashed var(--brown-light);
+    background: var(--cream);
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ==================== HERO ==================== */
+.hero-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+/* ==================== BOTONES ==================== */
+.btn,
+.add-btn {
+    display: inline-block;
+    background: var(--brown-light);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btn:hover,
+.add-btn:hover {
+    background: var(--caramel);
+    color: var(--brown);
+}
+
+/* ==================== FAQ ==================== */
+.faq details {
+    background: var(--mint);
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid var(--brown-light);
+    margin-bottom: 10px;
+}
+.faq summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="#home">Inicio</a>
+    <a href="#about">Sobre Nosotros</a>
+    <a href="#menu">Menú</a>
+    <a href="#taller">Taller</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<!-- HOME -->
+<div class="container" id="home">
+    <h1 class="title">Red Velvet</h1>
+    <p class="subtitle">Pastelería artesanal ♡</p>
+
+    <img src="img/pasteleriaa.jpeg" class="hero-img" alt="Pastelería">
+
+    <div class="box" style="text-align:center; margin-top:20px;">
+        <p><strong>En Pastelería Red Velvet endulzamos tu día.</strong></p>
+        <p>Roma Norte · CDMX</p>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<div class="container" id="about">
+    <h1 class="title">Sobre Nosotros</h1>
+
+    <div class="grid-2">
+        <div class="box">
+            <h3>Nuestras creaciones</h3>
+            <p>Bento cakes, cupcakes decorados y pasteles temáticos.</p>
+            <div class="img">
+                <img src="img/mostrador.jpeg" alt="Mostrador">
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Historia</h3>
+            <p>Red Velvet nació para mezclar lo adorable con lo delicioso.</p>
+            <a class="btn">Saber más</a>
+        </div>
+    </div>
+</div>
+
+<!-- MENÚ -->
+<div class="container" id="menu">
+    <h1 class="title">Menú</h1>
+
+    <div class="grid-3">
+        <div class="box">
+            <h3>Pastel Red Velvet</h3>
+            <div class="img"><img src="img/pastelred.jpeg"></div>
+            <p>$1200</p>
+            <button class="add-btn">Agregar al carrito</button>
+        </div>
+
+        <div class="box">
+            <h3>Cupcakes</h3>
+            <div class="img"><img src="img/cupcake.jpeg"></div>
+            <p>$1100</p>
+            <button class="add-btn">Agregar al carrito</button>
+        </div>
+
+        <div class="box">
+            <h3>Brownies</h3>
+            <div class="img"><img src="img/brownies.jpeg"></div>
+            <p>$900</p>
+            <button class="add-btn">Agregar al carrito</button>
+        </div>
+
+        
+        <div class="box">
+            <h3>Pastel 3 Leches</h3>
+            <div class="img"><img src="img/tresleches.jpg"></div>
+            <p>$700</p>
+            <button class="add-btn">Agregar al carrito</button>
+        </div>
+
+        <div class="box">
+            <h3>Pastel de Chocolate</h3>
+            <div class="img"><img src="img/pastelchoco.jpg"></div>
+            <p>$800</p>
+            <button class="add-btn">Agregar al carrito</button>
+        </div>
+
+        <div class="box">
+            <h3>Pastel de Chocolate Amargo</h3>
+            <div class="img"><img src="img/chocoamargo.jpg"></div>
+            <p>$900</p>
+            <button class="add-btn">Agregar al carrito</button>
+        </div>
+
+         <div class="box">
+            <h3>Pastel Triple Chocolate</h3>
+            <div class="img"><img src="img/triplechoco.jpg"></div>
+            <p>$1000</p>
+            <button class="add-btn">Agregar al carrito</button>
+        </div>
+
+        <div class="box">
+            <h3>Pay de Cereza</h3>
+            <div class="img"><img src="img/paycereza.jpg"></div>
+            <p>$600</p>
+            <button class="add-btn">Agregar al carrito</button>
+        </div>
+
+        <div class="box">
+            <h3>Flan Clasico</h3>
+            <div class="img"><img src="img/flanclasico.jpg"></div>
+            <p>$100</p>
+            <button class="add-btn">Agregar al carrito</button>
+        </div>
+
+         <div class="box">
+            <h3>Flan Napolitano</h3>
+            <div class="img"><img src="img/flannapolitano.jpg"></div>
+            <p>$130</p>
+            <button class="add-btn">Agregar al carrito</button>
+        </div>
+
+        <div class="box">
+            <h3>Pastel de Helado</h3>
+            <div class="img"><img src="img/pastelhelado.jpg"></div>
+            <p>$250</p>
+            <button class="add-btn">Agregar al carrito</button>
+        </div>
+
+        <div class="box">
+            <h3>Pastel Mil Hojas</h3>
+            <div class="img"><img src="img/pastelmilhojas.jpg"></div>
+            <p>$300</p>
+            <button class="add-btn">Agregar al carrito</button>
+        </div>
+
+         <div class="box">
+            <h3>Flan de Chocolate</h3>
+            <div class="img"><img src="img/flanchoco.jpg"></div>
+            <p>$150</p>
+            <button class="add-btn">Agregar al carrito</button>
+        </div>
+
+        <div class="box">
+            <h3>Galletas Red velvet</h3>
+            <div class="img"><img src="img/galletasredvelvet.jpg"></div>
+            <p>$500</p>
+            <button class="add-btn">Agregar al carrito</button>
+        </div>
+
+        <div class="box">
+            <h3>Macaroons</h3>
+            <div class="img"><img src="img/macaroons.jpg"></div>
+            <p>$550</p>
+            <button class="add-btn">Agregar al carrito</button>
+        </div>
+    </div>
+</div>
+
+<!-- TALLER -->
+<div class="container" id="taller">
+    <h1 class="title">Taller de Repostería</h1>
+    <div class="box">
+        <p>Aprende a decorar bento cakes desde cero.</p>
+        <div class="img"><img src="img/tallerr.jpeg"></div></div>
+        <a class="btn">Reservar</a>
+    </div>
+</div>
+
+<!-- CONTACTO -->
+<div class="container" id="contacto">
+    <h1 class="title">Contacto</h1>
+
+    <div class="box">
+        <p>📞 55 5555 5555</p>
+        <p>📍 CDMX</p>
+        <a class="btn">Enviar mensaje</a>
+    </div>
+
+    <h2 style="font-family:'Berkshire Swash';">Preguntas Frecuentes</h2>
+
+    <div class="faq">
+        <details>
+            <summary>¿Hacen entregas?</summary>
+            <p>Sí, en CDMX.</p>
+        </details>
+        <details>
+            <summary>¿Con cuánta anticipación?</summary>
+            <p>2 a 3 días antes.</p>
+        </details>
+        <details>
+            <summary>¿Diseños personalizados?</summary>
+            <p>Sí, mándanos tu idea.</p>
+        </details>
+    </div>
+</div>
+
+</body>
+</html>

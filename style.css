@@ -1,0 +1,130 @@
+/* ----- CARRITO ----- */
+.cart-container {
+    background: var(--mint);
+    border: 3px solid var(--brown-light);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+.cart-title {
+    font-family: 'Berkshire Swash';
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.cart-item {
+    background: white;
+    border: 2px solid var(--border);
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-item button {
+    background: #ff9db3;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+.cart-item button:hover {
+    background: #ffb9c7;
+}
+
+/* Botón de agregar */
+.add-btn {
+    display:inline-block;
+    background:#ff9db3;
+    color:white;
+    padding:8px 15px;
+    border-radius:20px;
+    font-weight:bold;
+    text-decoration:none;
+    cursor:pointer;
+    box-shadow:0 4px 0 #d37a8b;
+}
+.add-btn:hover {
+    background:#ffc4d1;
+    color:#5a3b28;
+}
+
+/* ---- BOTÓN FLOTANTE DEL CARRITO ---- */
+.cart-floating-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #ff9db3;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #d37a8b;
+    z-index: 9999;
+    transition: 0.2s;
+}
+.cart-floating-btn:hover {
+    background: #ffc4d1;
+    color: #5a3b28;
+}
+
+/* ---- PANEL LATERAL DEL CARRITO ---- */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -350px; /* Oculto inicialmente */
+    width: 350px;
+    height: 100vh;
+    background: #fff6e9;
+    border-left: 4px solid #c19a82;
+    box-shadow: -4px 0 10px #00000030;
+    padding: 25px;
+    transition: 0.3s;
+    z-index: 9998;
+    overflow-y: auto;
+}
+
+.cart-sidebar.open {
+    right: 0;
+}
+
+.cart-sidebar h2 {
+    font-family: 'Berkshire Swash';
+    margin-top: 0;
+}
+
+.cart-item {
+    background: white;
+    border: 2px solid #c19a82;
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.cart-item button {
+    background: #ff9db3;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.order-btn {
+    display: block;
+    background: #ff9db3;
+    color: white;
+    padding: 10px;
+    border-radius: 18px;
+    text-align: center;
+    margin-top: 15px;
+}
+
